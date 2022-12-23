@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -52,9 +49,6 @@ dataset = pd.merge(pd.merge(movies, ratings),users)
 dataset[['title','genres','rating']].sort_values('rating', ascending=False).head(20)
 
 
-# In[ ]:
-
-
 # Make a census of the genre keywords
 genre_labels = set()
 for s in movies['genres'].str.split('|').values:
@@ -83,9 +77,6 @@ keyword_occurences, dum = count_word(movies, 'genres', genre_labels)
 keyword_occurences[:5]
 
 
-# In[ ]:
-
-
 # Define the dictionary used to produce the genre wordcloud
 genres = dict()
 trunc_occurences = keyword_occurences[0:18]
@@ -101,10 +92,6 @@ f, ax = plt.subplots(figsize=(16, 8))
 plt.imshow(genre_wordcloud, interpolation="bilinear")
 plt.axis('off')
 plt.show()
-
-
-# In[ ]:
-
 
 # Fill NaN values in user_id and movie_id column with 0
 ratings['user_id'] = ratings['user_id'].fillna(0)
@@ -142,9 +129,6 @@ item_correlation[np.isnan(item_correlation)] = 0
 print(item_correlation[:4, :4])
 
 
-# In[ ]:
-
-
 # Function to predict ratings
 def predict(ratings, similarity, type='user'):
     if type == 'user':
@@ -155,10 +139,6 @@ def predict(ratings, similarity, type='user'):
     elif type == 'item':
         pred = ratings.dot(similarity) / np.array([np.abs(similarity).sum(axis=1)])
     return pred
-
-
-# In[ ]:
-
 
 # Evalution
 from sklearn.metrics import mean_squared_error
