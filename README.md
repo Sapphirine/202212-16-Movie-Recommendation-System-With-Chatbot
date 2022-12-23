@@ -4,6 +4,8 @@ Since the limitation of the uploading for the github file. Please find our ratin
 
 This project presents Machine Learning-based algorithms for a collaborative filtering movie recommendation system with front-end virtual chatbot implementation. Collaborative filtering, and K-nearest neighbor algorithms are implemented to design a full-stack system for movie lovers by streamlining their movie-searching experience across AWS platform. With our methodology and proper data processing techniques, this system could be ideally implemented to any streaming service with a valid amount of user viewing history.
 
+# Goal
+
 Our project deployed a real-time movie recommendation dialog robot. This work is currently novel, and we think it could be a great tool for movie recommendation.
 
 First, chatbots have 24*7 Availability: Chatbots are designed to answer customer questions to avoid fatigue and be more responsive. Moreover, chatbots can help to minimize errors, whereas people can make mistakes (human error) in providing appropriate information to the users. Chatbots also reduces Operational Costs: By replacing a human with a chatbot, a company can reduce its operational cost.
