@@ -23,6 +23,6 @@ Our three algorithms could be combined to proceed the entire machine learning-ba
 # System
 
 In terms of the system, we conducted research on the existing movie recommendation chatbot, and finally chose to build a system that is more complete and intelligent than other systems from database to frontend.
-We chose AWS s3, an object storage service offering industry-leading scalability, data availability, security, and performance to host our webpage, API Gateway to manage the webpage API, amazon lex to deploy the dialogue robot and then pass in SQS to interact with the database. The intermediate mindware is connected using a lambda function.
+We chose AWS s3, an object storage service offering industry-leading scalability, data availability, security, and performance to host our webpage, API Gateway to manage the webpage API, amazon lex to deploy the dialogue robot and then Lambda Functions for connecting the midwares.
 
 
